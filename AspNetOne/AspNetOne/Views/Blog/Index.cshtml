@@ -1,0 +1,41 @@
+﻿@using AspNetOne.Models
+@model List<Post>;
+@{
+	ViewData["Title"] = "Blog";
+}
+<div id="body">
+			<div class="header">
+				<div>
+					<h1>Blog</h1>
+				</div>
+			</div>
+			<div class="blog">
+				<div class="featured">
+					<ul>
+						@foreach (Post item in @Model)
+					   {
+						   
+						<li>
+							<img src="@item.Img" alt="">
+							<div>
+								<h1>@item.Name</h1>
+								<span>@item.SubName</span>
+								<p>@item.Text</p>
+								<a href="@item.Link" class="more">Read More</a>
+							</div>
+						</li>
+						
+					   }
+					</ul>
+					<a href="blog.html" class="load">Load More</a>
+				</div>
+				<div class="sidebar">
+					<h1>Recent Posts</h1>
+					<img src="~/images/on-diet.png" alt="">
+					<h2>ON THE DIET</h2>
+					<span>By Admin on November 28, 2023</span>
+					<p>You can replace all this text with your own text. You can remove any link to our website from this website template.</p>
+					<a asp-controller="Home" asp-action="Index" class="more">Read More</a>
+				</div>
+			</div>
+		</div>

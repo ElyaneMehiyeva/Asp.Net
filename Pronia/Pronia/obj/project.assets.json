@@ -5722,19 +5722,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elyam\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elyam\\Desktop\\.net\\Pronia\\Pronia\\Pronia.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Elyane\\Pronia\\Pronia\\Pronia.csproj",
       "projectName": "Pronia",
-      "projectPath": "C:\\Users\\elyam\\Desktop\\.net\\Pronia\\Pronia\\Pronia.csproj",
-      "packagesPath": "C:\\Users\\elyam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elyam\\Desktop\\.net\\Pronia\\Pronia\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\Elyane\\Pronia\\Pronia\\Pronia.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Elyane\\Pronia\\Pronia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\elyam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5793,7 +5793,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

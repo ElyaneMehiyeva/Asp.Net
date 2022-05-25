@@ -1,0 +1,47 @@
+﻿@model List<Slider>
+@{
+    ViewData["Title"] = "Admin Panel - Sliders";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="white-box">
+            <h3 class="box-title">Sliders</h3>
+            <a asp-controller="Slider" asp-action="Create" class="btn btn-primary">Create new slider</a>
+            <div class="table-responsive">
+                <table class="table text-nowrap">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0">#</th>
+                            <th class="border-top-0">Title</th>
+                            <th class="border-top-0">Description</th>
+                            <th class="border-top-0">Discount Percent</th>
+                            <th class="border-top-0">Image Src</th>
+                            <th class="border-top-0"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Slider item in @Model)
+                       {
+                            <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@item.Percent %</td>
+                            <td>
+                                <img style="width:100px; height:70px;object-fit:contain;"  src="~/images/slider/inner-img/@item.Image"/>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-warning">Edit  <i class="fas fa-pencil-alt"></i></a>
+                                <a asp-controller="Slider" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete <i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                       }
+                       
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

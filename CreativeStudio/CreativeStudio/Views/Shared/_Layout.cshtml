@@ -1,48 +1,207 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CreativeStudio</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CreativeStudio</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <!-- Author -->
+    <meta name="author" content="Themes Industry">
+    <!-- description -->
+    <meta name="description" content="MegaOne is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose studio and portfolio HTML5 template with 8 ready home page demos.">
+    <!-- keywords -->
+    <meta name="keywords" content="Creative Startup, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, studio, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, studio, masonry, grid, faq">
+    <!-- Page Title -->
+    <title>Creative Studio | MegaOne HTML5 Template</title>
+    <!-- Favicon -->
+    <link rel="icon" href="~/creative-studio/img/favicon.ico">
+    <!-- Bundle -->
+    <link rel="stylesheet" href="~/vendor/css/bundle.min.css">
+    <!-- Plugin Css -->
+    <link rel="stylesheet" href="~/vendor/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="~/creative-studio/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/creative-studio/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/vendor/css/swiper.min.css">
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - CreativeStudio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <link rel="stylesheet" href="~/vendor/css/cubeportfolio.min.css">
+    <!-- Revolution Slider CSS Files -->
+    <link rel="stylesheet" href="~/creative-studio/css/navigation.css">
+    <link rel="stylesheet" href="~/creative-studio/css/settings.css">
+    <!-- Slick CSS Files -->
+    <link rel="stylesheet" href="~/vendor/css/slick.css">
+    <link rel="stylesheet" href="~/vendor/css/slick-theme.css">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="~/creative-studio/css/style.css">
+    <!-- Custom Style CSS File -->
+    <link rel="stylesheet" href="~/creative-studio/css/custom.css">
+</head>
+<body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
+
+<!-- Loader -->
+<div class="loader" id="loader-fade">
+    <div class="loader-container">
+        <ul class="loader-box">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<!-- Loader ends -->
+
+<!-- Header start -->
+<header class="cursor-light">
+    <nav class="navbar navbar-top-default navbar-expand-lg nav-three-circles black bottom-nav nav-box-shadow no-animation">
+        <div class="container-fluid">
+            <a class="logo ml-lg-1" href="javascript:void(0)">
+                <img src="~/creative-studio/img/logo.png" alt="logo" title="Logo" class="logo-default">
+                <img src="~/creative-studio/img/logo2.png" alt="logo" title="Logo" class="logo-scrolled">
+            </a>
+            <div class="collapse navbar-collapse d-none d-lg-block">
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item"> <a href="#home" class="scroll nav-link">home</a></li>
+                    <li class="nav-item"> <a href="#about" class="scroll nav-link">about</a></li>
+                    <li class="nav-item"> <a href="#work" class="scroll nav-link">work</a></li>
+                    <li class="nav-item"> <a href="#pricing" class="scroll nav-link">pricing</a></li>
+                    <li class="nav-item"> <a href="#clients" class="scroll nav-link">clients</a></li>
+                    <li class="nav-item"> <a href="#blog" class="scroll nav-link">blog</a></li>
+                    <li class="nav-item"> <a href="#contact" class="scroll nav-link">contact</a></li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" class="btn-setting btn-hvr-up btn-hvr-whatsapp color-black mr-lg-3 d-none d-lg-block"><i class="fab fa-whatsapp"></i> +1 631 112 1134</a>
+            <!-- side menu open button -->
+            <a class="menu_bars d-inline-block menu-bars-setting animated-wrap sidemenu_toggle d-block d-lg-none">
+                <div class="menu-lines animated-element">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+            <!-- Side Menu -->
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    </nav>
+    <!-- side menu open button -->
+    <a class="menu_bars menu-bars-setting animated-wrap sidemenu_toggle d-lg-inline-block d-none">
+        <div class="menu-lines animated-element">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </a>
+    <!-- Side Menu -->
+    <div class="side-menu center">
+        <div class="quarter-circle">
+            <div class="menu_bars2 active" id="btn_sideNavClose">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="inner-wrapper justify-content-center">
+            <div class="col-md-12 text-center">
+                <a href="javascript:void(0)" class="logo-full mb-4"><img src="~/creative-studio/img/logo-pure-white.png" alt=""></a>
+            </div>
+            <nav class="side-nav m-0">
+                <ul class="navbar-nav flex-lg-row">
+                    <li class="nav-item"> <a href="#home" class="scroll nav-link">home</a></li>
+                    <li class="nav-item"> <a href="#about" class="scroll nav-link">about</a></li>
+                    <li class="nav-item"> <a href="#work" class="scroll nav-link">work</a></li>
+                    <li class="nav-item"> <a href="#pricing" class="scroll nav-link">pricing</a></li>
+                    <li class="nav-item"> <a href="#clients" class="scroll nav-link">clients</a></li>
+                    <li class="nav-item"> <a href="#blog" class="scroll nav-link">blog</a></li>
+                    <li class="nav-item"> <a href="#contact" class="scroll nav-link">contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="side-footer text-white w-100">
+                <ul class="social-icons-simple">
+                    <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-facebook-f color-white"></i> </a> </li>
+                    <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-instagram color-white"></i> </a> </li>
+                    <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-twitter color-white"></i> </a> </li>
+                </ul>
+                <p class="text-white">&copy; 2020 MegaOne. Made With Love by Themesindustry</p>
+            </div>
+        </div>
+    </div>
+    <a id="close_side_menu" href="javascript:void(0);"></a>
+    <!--Side Menu-->
+</header>
+<!-- Header end -->
+            @RenderBody()
+            
+<!-- Footer starts -->
+<footer class="p-half bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">
+                <ul class="footer-icons mb-4">
+                    <li><a href="javascript:void(0)" class="wow fadeInUp facebook"><i class="fab fa-facebook-f"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInDown twitter"><i class="fab fa-twitter"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInUp google"><i class="fab fa-google"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInDown linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInUp instagram"><i class="fab fa-instagram"></i> </a> </li>
+                    <li><a href="javascript:void(0)" class="wow fadeInDown pinterest"><i class="fab fa-pinterest-p"></i> </a> </li>
+                </ul>
+                <p class="copyrights mt-2 mb-2">© 2020 MegaOne. Made with love by <a href="javascript:void(0)">themesindustry</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer ends -->
+
+<!--Animated Cursor-->
+<div id="animated-cursor">
+    <div id="cursor">
+        <div id="cursor-loader"></div>
+    </div>
+</div>
+<!--Animated Cursor End-->
+
+<!-- JavaScript -->
+<script src="vendor/js/bundle.min.js"></script>
+
+<!-- Plugin Js -->
+<script src="vendor/js/jquery.fancybox.min.js"></script>
+<script src="vendor/js/owl.carousel.min.js"></script>
+<script src="vendor/js/swiper.min.js"></script>
+<script src="vendor/js/jquery.cubeportfolio.min.js"></script>
+<script src="vendor/js/jquery.appear.js"></script>
+<script src="vendor/js/parallaxie.min.js"></script>
+<script src="vendor/js/wow.min.js"></script>
+<!-- Owl Carousel JS File -->
+<script src="~/creative-studio/js/owl.carousel.js"></script>
+<!-- Slick JS File -->
+<script src="vendor/js/slick.min.js"></script>
+<!-- Tween Max Animation File -->
+<script src="~/creative-studio/js/TweenMax.min.js"></script>
+<!-- Morphtext File -->
+<script src="~/creative-studio/js/morphext.min.js"></script>
+<!-- REVOLUTION JS FILES -->
+<script src="vendor/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendor/js/jquery.themepunch.revolution.min.js"></script>
+<!-- SLIDER REVOLUTION EXTENSIONS -->
+<script src="vendor/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.video.min.js"></script>
+
+<!-- Google Map Api -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw"></script>
+<script src="~/creative-studio/js/maps.min.js"></script>
+
+<!-- custom script -->
+<script src="~/creative-studio/js/script.js"></script>
+
 </body>
 </html>
+   

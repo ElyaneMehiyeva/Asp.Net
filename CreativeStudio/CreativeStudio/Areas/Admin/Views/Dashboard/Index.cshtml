@@ -1,0 +1,41 @@
+﻿@model Main
+@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+
+<div class="body-content">
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="fs-17 font-weight-600 mb-0">Edit Main Cards</h6>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label asp-for="Title" class="font-weight-600">Title</label>
+                            <input asp-for="Title" type="text" class="form-control" id="Title">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description" class="font-weight-600">Description</label>
+                            <textarea asp-for="Description" class="form-control" id="Description" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Icon" class="font-weight-600">Icon</label>
+                            <input asp-for="Icon" type="text" class="form-control" id="Icon" >
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

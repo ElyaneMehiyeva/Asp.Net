@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Pronia.DAL;
 using Pronia.Models;
@@ -21,11 +22,13 @@ namespace Pronia.Controllers
         public IActionResult Index()
         {
             List<Slider> sliders = _context.sliders.ToList();
-            List<Product> products = _context.products.OrderByDescending(product=>product.Id).Take(8).ToList();
+            List<Category> categories = _context.categories.ToList();
+            List<Product> products = _context.products.OrderByDescending(product => product.Id).Take(8).Include(p=>p.ProductImages).ToList();
             _ViewModel vm = new _ViewModel()
             {
                 sliders = sliders,
                 products = products,
+                categories = categories
             };
             return View(vm);
         }

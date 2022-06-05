@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pronia.Models
 {
@@ -9,7 +11,9 @@ namespace Pronia.Models
         [Required,MaxLength(40)]
         public string Name { get; set; }
         public string Description { get; set; }
-        [Required]
+        
         public string Image { get; set; }
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
     }
 }

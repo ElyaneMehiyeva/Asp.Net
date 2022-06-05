@@ -10,6 +10,14 @@ namespace Pronia.DAL
 
         }
         public DbSet<Slider> sliders { get; set; }
+        public DbSet<Color> colors { get; set; }
+        public DbSet<Category> categories { get; set; }
+
         public DbSet<Product> products { get; set; }
+
+        public DbSet<ProductImage> productImages { get; set; }
+
+        public DbSet<ProductColor> productColors { get; set; }
+
     }
 }

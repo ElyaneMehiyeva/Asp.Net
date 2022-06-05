@@ -8480,11 +8480,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Pronia\\Pronia\\Pronia.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Elyane\\Pronia\\Pronia\\Pronia.csproj",
       "projectName": "Pronia",
-      "projectPath": "C:\\Users\\User\\Desktop\\Pronia\\Pronia\\Pronia.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Elyane\\Pronia\\Pronia\\Pronia.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Pronia\\Pronia\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Elyane\\Pronia\\Pronia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

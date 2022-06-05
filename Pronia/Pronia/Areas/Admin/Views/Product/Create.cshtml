@@ -1,0 +1,136 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Admin Panel - Create Product";
+}
+<div class="col-lg-12 col-xlg-12 col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data" class="form-horizontal form-material">
+
+
+                <!---Product Name-->
+                <div class="form-group mb-4">
+                    <label asp-for="Name" class="col-md-12 p-0">Product Name</label>
+                    <div class="col-md-12 border-bottom p-0">
+                        <input asp-for="Name" class="form-control p-0 border-0">
+                    </div>
+                    <span asp-validation-for="Name" style="color:darkred;"></span>
+                </div>
+
+
+
+                <!---Product Price-->
+                <div class="form-group mb-4">
+                    <label asp-for="Price" class="col-md-12 p-0">Product Price</label>
+                    <div class="col-md-12 border-bottom p-0">
+                        <input asp-for="Price" class="form-control p-0 border-0">
+                    </div>
+                </div>
+
+                <!---Product Description-->
+                <div class="form-group mb-4">
+                    <label asp-for="Description" class="col-md-12 p-0">Product Description</label>
+                    <div class="col-md-12 border-bottom p-0">
+                        <textarea asp-for="Description" rows="5" class="form-control p-0 border-0"></textarea>
+                    </div>
+                </div>
+
+
+                <!---Product Raiting-->
+                <div class="form-group mb-4">
+                    <label asp-for="Raiting" class="col-md-12 p-0">Product Raiting</label>
+                    <div class="col-md-12 border-bottom p-0">
+                        <input asp-for="Raiting" class="form-control p-0 border-0">
+                    </div>
+                </div>
+
+
+                <!---Product StockCount-->
+                <div class="form-group mb-4">
+                    <label asp-for="StockCount" class="col-md-12 p-0">Product StockCount</label>
+                    <div class="col-md-12 border-bottom p-0">
+                        <input asp-for="StockCount" class="form-control p-0 border-0">
+                    </div>
+                </div>
+
+                <!---Product Category-->
+                <div class="form-group">
+                    <label class="col-sm-12">Select Category</label>
+                    <div class="col-sm-12">
+                        <select asp-for="CategoryId" class="form-control form-control-line" asp-items="new SelectList(ViewBag.Categories,nameof(Category.Id),nameof(Category.Name))">
+                            <option disabled selected>Category</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <!---Product Colors-->
+                <div class="form-group">
+                    <label class="col-sm-12">Select Colors</label>
+                    <div class="col-sm-12">
+                        <select asp-for="ColorIDS" style="min-height:100px;" class="form-control form-control-line" asp-items="new SelectList(ViewBag.Colors,nameof(Color.Id),nameof(Color.Name))">
+                            <option disabled selected>Colors</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!---Product Images-->
+                <div class="form-group mb-4">
+                    <label asp-for="Images" class="col-md-12 p-0">Choose Product Images</label>
+                    <div class="col-md-12 border-bottom p-0">
+                        <input asp-for="Images" id="allfiles" class="form-control p-0 border-0" accept="image/*">
+                    </div>
+                    <span asp-validation-for="Images" style="color:darkred;"></span>
+                </div>
+
+
+                <div id="image-container" class="mb-4">
+                </div>
+
+                <div class="form-group mb-4">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">
+                            Create
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section js{
+<script>
+    let input = document.getElementById("allfiles");
+    let container = document.getElementById("image-container");
+    input.onchange = function(e){
+         let files = [...this.files];
+         files.forEach(file=>{
+             let fr = new FileReader();
+             const img = document.createElement("img");
+             const check = document.createElement("input");
+             const label = document.createElement("label");
+             img.setAttribute("width","100px");
+             img.setAttribute("height","70px");
+             label.style.marginRight="10px";
+
+
+             check.setAttribute("type","radio");
+             check.setAttribute("name","MainPhotoSrc");
+             
+             fr.onload = (e)=>{
+                 img.src = e.target.result;                 
+             }
+             
+             check.setAttribute("value",`${file.name}`);
+             label.append(img);
+             label.append(check);
+             container.append(label);
+             fr.readAsDataURL(file);
+         });
+    }
+
+</script>
+}

@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="~/admin/plugins/images/favicon.png">
     <!-- Custom CSS -->
     <link href="~/admin/css/style.min.css" rel="stylesheet">
-     @RenderSection("css",false)
+
 </head>
 
 <body>
@@ -98,27 +98,7 @@
                             </a>
                         </li>
 
-                          <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-area="Admin" asp-controller="Color" asp-action="Index"
-                               aria-expanded="false">
-                                <i class="fa fa-clock" aria-hidden="true"></i>
-                                <span class="hide-menu">Colors</span>
-                            </a>
-                        </li>
-                          <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-area="Admin" asp-controller="Category" asp-action="Index"
-                               aria-expanded="false">
-                                <i class="fa fa-clock" aria-hidden="true"></i>
-                                <span class="hide-menu">Categories</span>
-                            </a>
-                        </li>
-                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-area="Admin" asp-controller="Product" asp-action="Index"
-                               aria-expanded="false">
-                                <i class="fa fa-clock" aria-hidden="true"></i>
-                                <span class="hide-menu">Products</span>
-                            </a>
-                        </li>
+
 
 
                     </ul>
@@ -167,7 +147,6 @@
     <script src="~/admin/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="~/admin/js/custom.js"></script>
-    @RenderSection("js",false)
 </body>
 
 </html>
